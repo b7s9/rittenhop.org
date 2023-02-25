@@ -70,6 +70,19 @@ html, body {
 	color: #1d1d1d;
 }
 
+.hero {
+	margin: 0 auto;
+	max-width: 1024px;
+	max-height: 420px;
+	overflow: hidden;
+	width: 100%;
+}
+
+.hero img {
+	width: 100%;
+	height: auto;
+}
+
 main {
 	border-radius: 8px;
 	font-size: var(--font-size-base);
