@@ -83,6 +83,10 @@ html, body {
 	height: auto;
 }
 
+.location-img {
+	max-width: 375px;
+}
+
 main {
 	border-radius: 8px;
 	font-size: var(--font-size-base);
