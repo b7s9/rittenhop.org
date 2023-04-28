@@ -20,6 +20,13 @@
 	src: url('./fonts/inter/Inter-Italic.woff');
 }
 
+@font-face {
+	font-family: "Salina";
+	font-weight: 400;
+	font-display: swap;
+	src: url('./fonts/Salina\ Regular.woff')
+}
+
 :root {
 	--font-size-sm: clamp(0.8rem, 0.07vw + 0.79rem, 0.84rem);
 	--font-size-base: clamp(1rem, 0.21vw + 0.96rem, 1.13rem);
@@ -32,6 +39,13 @@
 	--primary-500: #577E45;
 	--primary-300: #98B669;
 	--primary-100: #D6F7A2;
+
+	--night: #0e1909;
+	--forest: #516146;
+	--brick: #a29584;
+	--sand: #f2eee5;
+	--moss: #737a50;
+	--light-moss: #a1aa72;
 
 	--gray-900: #2a2a2a;
 	--gray-800: #3d3d3d;
@@ -66,17 +80,31 @@
 html, body {
 	/* background-color: var(--gray-50); */
 	background-color: #fff;
+	margin: 0;
+	padding: 0;
 	font-size: 100%;
-	color: #1d1d1d;
+	color: var(--black-80)
+}
+
+h1, h2, h3 {
+	color: var(--night)	;
+	font-family: 'Salina', cursive;
 }
 
 .hero {
 	margin: 0 auto;
-	max-width: 1024px;
 	max-height: 420px;
 	overflow: hidden;
 	width: 100%;
 }
+/* .hero {
+	margin: 0 auto;
+	max-height: 420px;
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+} */
 
 .hero img {
 	width: 100%;
@@ -89,12 +117,25 @@ html, body {
 	width: 100%;
 }
 
+.hero-spacer {
+	position: relative;
+	height: 300px;
+}
+
+p.lead {
+	font-size: var(--font-size-lg);
+}
+
 main {
+	/* background-color: var(--sand); */
 	border-radius: 8px;
+	/* box-shadow: 0 0 16px rgba(69, 69, 69, 0.37); */
 	font-size: var(--font-size-base);
 	padding: 1rem;
+	position: relative;
 	margin: 1rem auto;
 	max-width: 48rem;
+	z-index: 10;
 }
 
 h1 {
@@ -124,7 +165,7 @@ p {
 }
 
 a {
-	color: var(--primary-700);
+	color: var(--forest);
 }
 
 a:visited {
@@ -140,6 +181,7 @@ ul li{
 }
 
 .btn {
+	font-family: 'Salina', cursive;
 	border-radius: 6px;
 	cursor: pointer;
 	font-size: var(--font-size-lg);
@@ -152,7 +194,7 @@ ul li{
 }
 
 .btn-filled.primary {
-	background-color: var(--primary-700);
+	background-color: var(--forest);
 	color: #fff;
 }
 
@@ -161,12 +203,16 @@ ul li{
 	text-decoration: underline;
 }
 
+.btn-text:visited {
+	color: var(--black-90);
+}
+
 .btn-text:hover {
 	background-color: var(--black-10);
 }
 
 details.table-of-contents summary {
-	background-color: var(--primary-100);
+	background-color: var(--light-moss);
 	/* background-color: var(--white-10); */
 	border-radius: 6px;
 	cursor: pointer;
@@ -212,10 +258,28 @@ details.table-of-contents ul li {
 }
 
 div.time-place {
-	background-color: var(--gray-100);
-	/* background-color: var(--primary-100); */
+	background-color: var(--light-moss);
+	color: var(--black-full);
 	border-radius: 8px;
 	padding: 0.75rem 1rem;
+}
+
+.organizers {
+	display: flex;
+	gap: 16px;
+}
+
+.organizers figure {
+	padding: 0;
+	margin: 0;
+	font-size: var(--font-size-md);
+}
+
+.organizers figure img {
+	border-radius: 8px;
+	margin-bottom: 12px;
+	max-width: 500px;
+	width: 100%;
 }
 
 .callout {
@@ -235,13 +299,23 @@ footer a, footer a:visited {
 
 @media (prefers-color-scheme: dark) {
 	html, body {
-		/* background-color: #1a1a1a; */
-		background-color: #2a2a2a;
-		color: rgba(255, 255, 255, 0.87)
+		/* background-color: #2a2a2a; */
+		background-color: var(--night);
+		/* color: rgba(255, 255, 255, 0.87) */
+		color: var(--white-80);
+		/* color: var(--sand) */
+	}
+
+	h1, h2, h3 {
+		color: var(--sand);
+	}
+
+	main {
+		background-color: var(--night);
 	}
 
 	a {
-		color: var(--primary-300);
+		color: var(--light-moss);
 	}
 
 	a:visited {
@@ -249,7 +323,7 @@ footer a, footer a:visited {
 	}
 
 	.btn-filled.primary {
-		background-color: var(--primary-300);
+		background-color: var(--light-moss);
 		color: var(--black-full);
 	}
 	
@@ -257,20 +331,27 @@ footer a, footer a:visited {
 		color: var(--white-90);
 		text-decoration: underline;
 	}
+
+	.btn-text:visited {
+		color: var(--white-90);
+	}
 	
 	.btn-text:hover {
 		background-color: var(--white-10);
 	}
 
 	details.table-of-contents summary {
-		background-color: var(--primary-700);
+		background-color: var(--forest);
+		color: var(--sand);
 		/* background-color: var(--white-10); */
 	}
 	
 
 	div.time-place {
-		background-color: #3d3d3d;
-		/* background-color: var(--primary-700); */
+		/* background-color: #3d3d3d; */
+		background-color: var(--forest);
+		color: var(--sand);
+		/* color: var(--white-full) */
 	}
 }
 
