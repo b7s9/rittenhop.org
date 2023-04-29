@@ -45,7 +45,7 @@
 	--brick: #a29584;
 	--sand: #f2eee5;
 	--moss: #737a50;
-	--light-moss: #a1aa72;
+	--light-moss: #a8b07f;
 
 	--gray-900: #2a2a2a;
 	--gray-800: #3d3d3d;
@@ -86,9 +86,8 @@ html, body {
 	color: var(--black-80)
 }
 
-h1, h2, h3 {
-	color: var(--night)	;
-	font-family: 'Salina', cursive;
+#logo {
+	filter: drop-shadow(0 0 8px rgba(15, 80, 40, 0.37))
 }
 
 .hero {
@@ -138,21 +137,29 @@ main {
 	z-index: 10;
 }
 
+h1, h2, h3 {
+	color: var(--night)	;
+	font-family: 'Salina', cursive;
+}
+
 h1 {
 	/* font-size: 2rem; */
-	font-size: var(--font-size-xxl);
+	/* font-size: var(--font-size-xxl); */
+	font-size: 3rem;
 }
 
 h2 {
 	/* font-size: 1.5rem; */
-	font-size: var(--font-size-xl);
-	margin-top: 2rem;
+	/* font-size: var(--font-size-xl); */
+	font-size: 2.4rem;
+	margin-top: 3rem;
 }
 
 h3 {
 	/* font-size: 1.25rem; */
-	font-size: var(--font-size-lg);
-	margin-top: 1.25rem;
+	/* font-size: var(--font-size-lg); */
+	font-size: 2rem;
+	margin-top: 2rem;
 	margin-bottom: 0.75rem;
 }
 
@@ -212,7 +219,7 @@ ul li{
 }
 
 details.table-of-contents summary {
-	background-color: var(--light-moss);
+	background-color: var(--black-10);
 	/* background-color: var(--white-10); */
 	border-radius: 6px;
 	cursor: pointer;
@@ -279,13 +286,30 @@ div.time-place {
 	border-radius: 8px;
 	margin-bottom: 12px;
 	max-width: 500px;
+	transition: all ease-in-out 195ms;
 	width: 100%;
+}
+
+.organizers figure img:hover {
+	box-shadow: -8px 8px var(--moss);
+	transform: translate(8px, -8px);
 }
 
 .callout {
 	display: flex;
 	gap: 16px;
 	margin-top: 1.5rem;
+}
+
+.img-callout img {
+	border-radius: 8px;
+	transition: all ease-in-out 195ms;
+	width: 100%;
+}
+
+.img-callout img:hover {
+	box-shadow: -8px 8px var(--moss);
+	transform: translate(8px, -8px);
 }
 
 footer p {
@@ -304,6 +328,18 @@ footer a, footer a:visited {
 		/* color: rgba(255, 255, 255, 0.87) */
 		color: var(--white-80);
 		/* color: var(--sand) */
+	}
+
+	#logo {
+		filter: drop-shadow(0 0 8px rgba(249, 241, 205, 0.47))
+	}
+
+	#logo-rh {
+		fill: var(--sand);
+	}
+
+	#logo-ittenop {
+		fill: var(--light-moss);
 	}
 
 	h1, h2, h3 {
@@ -341,7 +377,7 @@ footer a, footer a:visited {
 	}
 
 	details.table-of-contents summary {
-		background-color: var(--forest);
+		background-color: var(--white-10);
 		color: var(--sand);
 		/* background-color: var(--white-10); */
 	}
@@ -359,4 +395,16 @@ footer a, footer a:visited {
 	h2 {
 		margin-top: 3rem;
 	}
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
 }
