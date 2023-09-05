@@ -301,9 +301,9 @@ div.time-place {
 }
 
 .conversation a.network-site {
-	color: var(--white-full);
+	color: var(--black-full);
 	background-color: none;
-	border: 2px solid var(--white-30);
+	border: 2px solid var(--black-30);
 	border-radius: 6px;
 	display: block;
 	max-width: 500px;
@@ -318,7 +318,7 @@ div.time-place {
 .conversation a.network-site:hover {
 	/* color: var(--white-80); */
 	/* background-color: var(--white-10); */
-	border-color: var(--primary-300);
+	border-color: var(--primary-500);
 }
 
 .conversation a.network-site .site-heading {
@@ -336,7 +336,7 @@ div.time-place {
 
 .conversation a.network-site svg {
 	display: inline-block;
-	fill: var(--white-90);
+	fill: var(--black-90);
 	height: auto;
 	transition: fill ease-in-out 195ms;
 	max-width: 100px;
@@ -438,12 +438,24 @@ footer a, footer a:visited {
 		/* background-color: var(--white-10); */
 	}
 	
-
 	div.time-place {
 		/* background-color: #3d3d3d; */
 		background-color: var(--forest);
 		color: var(--sand);
 		/* color: var(--white-full) */
+	}
+
+	.conversation a.network-site {
+		color: var(--white-full);
+		border-color: var(--white-30);
+	}
+
+	.conversation a.network-site:hover {
+		border-color: var(--primary-300);
+	}
+
+	.conversation a.network-site svg {
+		fill: var(--white-90);
 	}
 }
 
