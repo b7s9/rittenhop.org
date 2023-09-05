@@ -276,12 +276,12 @@ div.time-place {
 	padding: 0.75rem 1rem;
 }
 
-.organizers {
+.organizers, .conversation {
 	display: flex;
 	gap: 16px;
 }
 
-.organizers figure {
+.organizers figure, .conversation a.network-site {
 	padding: 0;
 	margin: 0;
 	font-size: var(--font-size-md);
@@ -298,6 +298,57 @@ div.time-place {
 .organizers figure img:hover {
 	box-shadow: -8px 8px var(--moss);
 	transform: translate(8px, -8px);
+}
+
+.conversation a.network-site {
+	color: var(--white-full);
+	background-color: none;
+	border: 2px solid var(--white-30);
+	border-radius: 6px;
+	display: block;
+	max-width: 500px;
+	padding: 12px;
+	text-align: center;
+	text-decoration: none;
+	transition: all ease-in-out 195ms;
+	width: 100%;
+	z-index: 10;
+}
+
+.conversation a.network-site:hover {
+	/* color: var(--white-80); */
+	/* background-color: var(--white-10); */
+	border-color: var(--primary-300);
+}
+
+.conversation a.network-site .site-heading {
+	display: block;
+	font-size: 24px;
+	margin: 12px 0;
+	text-align: center;
+}
+
+.conversation a.network-site .logo-container {
+	display: block;
+	text-align: center;
+	width: 100%;
+}
+
+.conversation a.network-site svg {
+	display: inline-block;
+	fill: var(--white-90);
+	height: auto;
+	transition: fill ease-in-out 195ms;
+	max-width: 100px;
+}
+
+.conversation a.network-site:hover svg {
+	fill: var(--primary-500);
+}
+
+.conversation a.network-site p {
+	display: block;
+	margin: 12px 0;
 }
 
 .callout {
