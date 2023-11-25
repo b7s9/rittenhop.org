@@ -281,6 +281,16 @@ div.time-place {
 	gap: 16px;
 }
 
+.conversation {
+	flex-wrap: wrap;
+}
+
+@media screen and (min-width:600px) {
+	.conversation {
+		flex-wrap: nowrap;
+	}
+}
+
 .organizers figure, .conversation a.network-site {
 	padding: 0;
 	margin: 0;
