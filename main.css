@@ -142,6 +142,11 @@ main {
 	/* grid-column: 2; */
 }
 
+aside {
+	display: inline-block;
+	width: 32rem;
+}
+
 h1, h2, h3 {
 	color: var(--night)	;
 	font-family: 'Salina', cursive;
@@ -223,7 +228,7 @@ ul li{
 	background-color: var(--black-10);
 }
 
-details.table-of-contents summary {
+details summary {
 	background-color: var(--black-10);
 	/* background-color: var(--white-10); */
 	border-radius: 6px;
@@ -231,7 +236,7 @@ details.table-of-contents summary {
 	padding: 1rem;
 }
 
-details.table-of-contents summary:hover {
+details summary:hover {
 	opacity: 0.8;
 }
 
@@ -241,7 +246,7 @@ details.table-of-contents summary:hover {
 	margin-left: 12px;
 } */
 
-details.table-of-contents ul li {
+details ul li {
 	line-height: 1.8;
 }
 
@@ -267,6 +272,57 @@ details.table-of-contents ul li {
 
 .alert a:visited {
 	color: #3e1950
+}
+
+div.events {
+	border: 1px solid var(--brick);
+	border-radius: 12px;
+	margin-top: 32px;
+	padding: 16px;
+}
+
+div.events header {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+}
+
+div.events header h2 {
+	margin: 16px 0;
+}
+
+div.events .event img {
+	border-radius: 8px;
+	height: auto;
+	width: 100%;
+}
+
+div.events .event span.event-title {
+	display: inline-block;
+	color: var(--black-full);
+	font-size: 22px;
+	font-weight: bold;
+	line-height: 32px;
+	margin: 16px 0;
+}
+
+div.events .event .date-location {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-bottom: 12px;
+}
+
+div.events .event .cta {
+	background: var(--primary-700);
+	border-radius: 6px;
+	color: white;
+	display: inline-block;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 12px;
+	padding: 12px 16px;
+	text-decoration: none;
 }
 
 div.time-place {
@@ -442,10 +498,14 @@ footer a, footer a:visited {
 		background-color: var(--white-10);
 	}
 
-	details.table-of-contents summary {
+	details summary {
 		background-color: var(--white-10);
 		color: var(--sand);
 		/* background-color: var(--white-10); */
+	}
+
+	div.events .event span.event-title {
+		color: var(--white-full);
 	}
 	
 	div.time-place {
