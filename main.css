@@ -325,6 +325,10 @@ div.events .event .cta, .cta, .cta:visited {
 	text-decoration: none;
 }
 
+div.merch img {
+	max-width: 100%;
+}
+
 div.time-place {
 	background-color: var(--light-moss);
 	color: var(--black-full);
