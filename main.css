@@ -313,7 +313,7 @@ div.events .event .date-location {
 	margin-bottom: 12px;
 }
 
-div.events .event .cta {
+div.events .event .cta, .cta, .cta:visited {
 	background: var(--primary-700);
 	border-radius: 6px;
 	color: white;
